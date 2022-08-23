@@ -1,5 +1,5 @@
-word = input("enter your word:  ")
-
+word = "ala ala"
+print(f"Sprawdzanie słowa czy jest to palindrom - {word}") 
 # wprowadzanie wyrazu
 def palindrom(word):
     if word =="".join(reversed(word)):
