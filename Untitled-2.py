@@ -1,19 +1,26 @@
-word = "ala ala"
-print(f"Sprawdzanie słowa czy jest to palindrom - {word}") 
-# wprowadzanie wyrazu
-def palindrom(word):
-    if word =="".join(reversed(word)):
-     #    Funkcja sprawdzająca czy dany wyraz to palindrom   
-        return True
-    else:
-        return False
+text = ""
+ 
+def palindrom(text: str) -> bool:
+ 
+    text = text.lower()
+    if text =="".join(reversed(text)):
         
-if (palindrom(word) == True):
-    # Wyświetlanie informacji dla sprawdzającego czy dany wyraz to palindrom
+        #Funkcja sprawdzająca czy dany wyraz to palindrom  
 
-    print("this word is palindrom")
-else:    
-    print("this word is not palindrom")
+        
+
+           print(f" Słowo to palindrom {text}")          
+           return True
+    else:
+           print(f" Słowo to nie palindrom {text}") 
+           return False
+
+
+
+if __name__ == "__main__":
     
-    
-    
+        # to jest absolutne minimum, które musisz zrealizować
+        assert palindrom("kot") is False
+        assert palindrom("kajak") is True
+        assert palindrom("Ala ma kota") is False 
+        assert palindrom("Kajak") is True
